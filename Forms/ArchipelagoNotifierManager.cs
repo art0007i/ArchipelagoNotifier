@@ -12,7 +12,6 @@ public partial class ArchipelagoNotifierManager : Form
         InitializeComponent();
     }
 
-
     #region API
     private void AddNewNotifier(Notifier notifier)
     {
