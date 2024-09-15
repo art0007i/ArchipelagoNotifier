@@ -5,6 +5,7 @@ A simple app that allows tracking multiple worlds, and sends you notifications w
 
 # Usage
 
+- When you minimize the app, it will become a tray icon.
 - Click "Add New Notifier" to add a notifier.
 - Afterwards you can connect it by right clicking it in the list, or clicking "Connect All".
 - To delete a notifier select it and press "delete" or right click it and delete.
