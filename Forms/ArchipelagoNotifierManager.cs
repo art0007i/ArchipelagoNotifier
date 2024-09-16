@@ -73,7 +73,7 @@ public partial class ArchipelagoNotifierManager : Form
     }
     #endregion
 
-    #region TrayIcon
+    #region Tray Icon
     protected override void OnResize(EventArgs e)
     {
         base.OnResize(e);
@@ -91,6 +91,7 @@ public partial class ArchipelagoNotifierManager : Form
         Visible = true;
         ShowInTaskbar = true;
         WindowState = FormWindowState.Normal;
+        Activate();
     }
     #endregion
 
