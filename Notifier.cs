@@ -80,7 +80,7 @@ public class Notifier
 
             await session.ConnectAsync();
 
-            var result = await session.LoginAsync(null, Name, ItemsHandlingFlags.AllItems, tags: ["Tracker"], password: Password);
+            var result = await session.LoginAsync(null, Name, ItemsHandlingFlags.RemoteItems, tags: ["Tracker"], password: Password);
             if (!result.Successful)
             {
                 session = null;
@@ -125,8 +125,8 @@ public class Notifier
 
             var game = session.Players.GetPlayerInfo(item.Player).Game;
             new ToastContentBuilder()
-                .AddText(item.Flags.ToString() +  "New Item for " + game)
-                .AddText($"{session.Items.GetItemName(item.Item, game)} found in {session.Locations.GetLocationNameFromId(item.Location)}")
+                .AddText("New Item for " + session.Players.ActivePlayer.Alias)
+                .AddText($"{session.Items.GetItemName(item.Item)} found in {session.Locations.GetLocationNameFromId(item.Location, game)}")
                 .Show();
         }
     }
